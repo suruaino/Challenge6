@@ -1,0 +1,196 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --Linear-Gradient: linear-gradient(135deg, rgb(163, 168, 240), rgb(105, 111, 221));
+
+    --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+    --Light-Grayish-Blue: hsl(234, 14%, 74%);
+    --h1-Light-Grayish-Blue: hsl(236, 20%, 51%);
+    --Shadow-Light-Grayish-Blue: hsla(235, 32%, 85%, 0.18);
+    --Grayish-Blue: hsl(233, 13%, 49%);
+    --Dark-Grayish-Blue: hsl(232, 13%, 33%);
+}
+body{
+    background-color: var(--Very-Light-Grayish-Blue); 
+    font-family: Montserrat;
+}
+.bg-top-right{
+    width: 130px; 
+    height: 400px;
+    background-image: url(images/bg-top.svg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+main{
+    z-index: 1;
+}
+main h1{
+    color: var(--h1-Light-Grayish-Blue);
+   
+}
+main label{
+    width: 3rem;
+    height: 1.7rem;
+    background: var(--Linear-Gradient);
+    position: absolute;
+    top: 8rem;
+ 
+    
+}
+main label::before{
+    content: "";
+    display: block;
+    border-radius: 50%;
+    transform: translateX(0%);
+    height: 1.7rem;
+    width: 1.7rem;
+    background-color: white;
+   
+}
+main #toggle{
+    position: absolute;
+    top: 8rem;
+    z-index: 10;
+    opacity: 0;
+}
+main  #annually,
+main #toggle:checked ~ #monthly{
+   display: none;
+}
+main #monthly,
+main #toggle:checked ~ #annually{
+   display: flex;
+}
+main #toggle:checked ~ label::before{
+    position: absolute;
+    right: 28px;
+    transform: translateX(100%);
+}
+
+main .period-annual{
+    top: 8.2rem;
+    left:  clamp(6rem, 29%, 375px);
+    color: var(--Light-Grayish-Blue);
+ 
+}
+main .period-monthly{
+    top: 8.2rem;
+    right: clamp(6rem, 29%, 375px);
+    color: var(--Light-Grayish-Blue)
+}
+main .basic{
+    color: var(--Dark-Grayish-Blue);
+    min-width: 16rem;
+
+}
+.basic:nth-child(2){
+    color: white;
+    background: var(--Linear-Gradient);
+}
+.basic:nth-child(2) button{
+    background: white;
+    color: var(--Grayish-Blue);
+ 
+}
+.basic #basic-details{
+    border-top: 1px solid var(--Light-Grayish-Blue);
+    border-bottom: 1px solid var(--Light-Grayish-Blue);
+}
+.basic #basic-details span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.basic button{
+    background: var(--Linear-Gradient);
+}
+@media only screen and (min-width: 365px){
+    main > .period-annual{
+        top: 8.2rem;
+        left:  clamp(18%, 25%, 30%);
+    }
+    main > .period-monthly{
+        top: 8.2rem;
+        right: clamp(18%, 25%, 30%);
+    }
+}
+@media only screen and (min-width: 512px){
+    main > .period-annual{
+        top: 8.2rem;
+        left:  clamp(25%, 33%, 38%);
+    }
+    main > .period-monthly{
+        top: 8.2rem;
+        right: clamp(25%, 33%, 38%);
+    }
+}
+@media only screen and (min-width: 600px){
+    main > .period-annual{
+        top: 8.2rem;
+        left:  clamp(28%, 36%, 38%);
+    }
+    main > .period-monthly{
+        top: 8.2rem;
+        right: clamp(28%, 36%, 38%);
+    }
+}
+@media only screen and (min-width: 768px){
+    .bg-top-right{
+        width: 350px;
+        height: 650px;
+        background-image: url(images/bg-top.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .bg-bottom-left{
+        width: 320px;
+        height: 250px;
+        background-image: url(images/bg-bottom.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    #professional{
+        min-height: 26rem;
+    }
+    main > .period-annual{
+        top: 8.2rem;
+        left:  clamp(31%, 34%, 36%);
+    }
+    main > .period-monthly{
+        top: 8.2rem;
+        right: clamp(31%, 34%, 36%);
+    }
+}
+
+@media only screen and (min-width: 920px){
+    #professional{
+        min-height: 30rem;
+    }
+    main .basic{
+        min-width: 20rem;
+        max-width: 32rem;
+        padding: 30px 8px;
+        gap: 2rem;
+    }
+    main > .period-annual{
+        top: 8.2rem;
+        left:  clamp(32%, 35%, 37%);
+    }
+    main > .period-monthly{
+        top: 8.2rem;
+        right: clamp(35%, 38%, 40%);
+    }
+}

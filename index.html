@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://kit.fontawesome.com/ee600e9388.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <style>
+    .attribution { font-size: 12px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="flex flex-col items-center justify-center py-8">
+
+  <div class="bg-top-right"></div>
+  <div class="bg-bottom-left"></div>
+
+  <main class="w-fulltext-center py-10 px-4 flex flex-col items-center gap-12">
+    <h1 class="text-2xl font-bold">Our Pricing</h1>
+    <h2 class="period-annual text-sm w-1/4 absolute flex justify-start">Monthly</h2>
+    <h2 class="period-monthly text-sm w-1/4 absolute flex justify-end">Annual</h2>
+    <input id="toggle" type="checkbox">
+    <label  class="rounded-2xl" for="toggle"></label>
+
+    <section id="monthly" class="main-container w-full flex flex-col md:flex-row items-center gap-5 justify-center md:gap-0 pt-8">
+
+      <article id="basic" class="basic w-52 max-w-2xl text-center px-4 py-5 flex flex-col gap-4 items-center bg-white rounded-lg shadow-lg ">
+        <h2 class="font-bold">Basic</h2>
+        <p class="font-bold text-5xl flex items-center gap-2"><span id="small" class=" text-2xl">$</span>19.99</p>
+        <div id="basic-details" class="w-full flex flex-col justify-evenly h-48">
+          <span class="">500 GB Storage</span> 
+          <hr>
+          <span class="">2 Users Allowed</span>
+          <hr>
+          <span class="">Send up to 3 GB</span>
+        </div>
+        <button class="w-full rounded-md text-white text-xs p-1 md:p-2">LEARN MORE</button>
+      </article>
+
+      <article id="professional" class="basic  w-52 max-w-2xl text-center px-4 py-5 flex flex-col gap-4 items-center bg-white rounded-lg shadow-lg ">
+        <h2 class="font-bold">Professional</h2>
+        <p class="font-bold text-5xl flex items-center gap-2"><span id="small" class=" text-2xl">$</span>24.99</p>
+        <div id="basic-details" class="w-full flex flex-col justify-evenly h-48">
+          <span>1 TB Storage</span> 
+          <hr>
+          <span>5 Users Allowed</span>
+          <hr>
+          <span>Send up to 10 GB</span>
+        </div>
+        <button class="w-full rounded-md text-white text-xs p-1 md:p-2">LEARN MORE</button>
+      </article>
+
+
+      <article id="Master" class="basic w-52 max-w-2xl text-center px-4 py-5 flex flex-col gap-4 items-center bg-white rounded-lg shadow-lg">
+        <h2 class="font-bold">Master</h2>
+        <p class="font-bold text-5xl flex items-center gap-2"><span id="small" class=" text-2xl">$</span>39.99</p>
+        <div id="basic-details" class="w-full flex flex-col justify-evenly h-48">
+          <span>2 TB Storage</span> 
+          <hr>
+          <span>10 Users Allowed</span>
+          <hr>
+          <span>Send up to 20 GB</span>
+        </div>
+        <button class="w-full rounded-md text-white text-xs p-1 md:p-2">LEARN MORE</button>
+      </article>
+
+    </section>
+
+
+    <section id="annually" class="main-container w-full flex flex-col md:flex-row items-center gap-5 justify-center md:gap-0 pt-8">
+
+      <article id="basic" class="basic w-52 max-w-2xl text-center px-4 py-5 flex flex-col gap-4 items-center bg-white rounded-lg shadow-lg ">
+        <h2 class="font-bold">Basic</h2>
+        <p class="font-bold text-5xl flex items-center gap-2"><span id="small" class=" text-2xl">$</span>199.99</p>
+        <div id="basic-details" class="w-full flex flex-col justify-evenly h-48">
+          <span>500 GB Storage</span> 
+          <hr>
+          <span>2 Users Allowed</span>
+          <hr>
+          <span>Send up to 3 GB</span>
+        </div>
+        <button class="w-full rounded-md text-white text-xs p-1 md:p-2">LEARN MORE</button>
+      </article>
+
+      <article id="professional" class="basic  w-52 max-w-2xl text-center px-4 py-5 flex flex-col gap-4 items-center bg-white rounded-lg shadow-lg ">
+        <h2 class="font-bold">Professional</h2>
+        <p class="font-bold text-5xl flex items-center gap-2"><span id="small" class=" text-2xl">$</span>249.99</p>
+        <div id="basic-details" class="w-full flex flex-col justify-evenly h-48">
+          <span>1 TB Storage</span> 
+          <hr>
+          <span>5 Users Allowed</span>
+          <hr>
+          <span>Send up to 10 GB</span>
+        </div>
+        <button class="w-full rounded-md text-white text-xs p-1 md:p-2">LEARN MORE</button>
+      </article>
+
+
+      <article id="Master" class="basic w-52 max-w-2xl text-center px-4 py-5 flex flex-col gap-4 items-center bg-white rounded-lg shadow-lg">
+        <h2 class="font-bold">Master</h2>
+        <p class="font-bold text-5xl flex items-center gap-2"><span id="small" class=" text-2xl">$</span>399.99</p>
+        <div id="basic-details" class="w-full flex flex-col justify-evenly h-48">
+          <span>2 TB Storage</span> 
+          <hr>
+          <span>10 Users Allowed</span>
+          <hr>
+          <span>Send up to 20 GB</span>
+        </div>
+        <button class="w-full rounded-md text-white text-xs p-1 md:p-2">LEARN MORE</button>
+      </article>
+
+    </section>
+  </main>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Suru Emmanuel</a>.
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
